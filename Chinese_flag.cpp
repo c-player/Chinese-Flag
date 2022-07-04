@@ -1,11 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-//Ò»¸ö×îÓÅÃÀµÄÍ¼°¸¡£
+//ç»˜åˆ¶äº”æ˜Ÿçº¢æ——ã€‚
 
 #include <graphics.h>
 #include <conio.h>
 #include <math.h>
-#include <stdio.h>
 
 #define PI 3.1415926
 
@@ -13,18 +12,18 @@ int main()
 {	
 	initgraph(640, 480);
 
-	/*  ¾ØĞÎ  */
+	/*  çŸ©å½¢  */
 	setfillcolor(RGB(255,0,0));
 	setlinecolor(RGB(255, 0, 0));
 	fillrectangle(170, 140, 470, 340);
 	
-	/*  Îå½ÇĞÇ  */
+	/*  äº”è§’æ˜Ÿ  */
 	float t;
 	t = (1 + tan(0.1*PI)*tan(0.1*PI)) / (3 - tan(0.1*PI)*tan(0.1*PI));
-	/*  ´óÎå½ÇĞÇ  */
-	//10¸öµã×ø±ê
-	float x = 220.0, y = 190.0;//ÖĞĞÄµã
-	float R = 30.0;            //°ë¾¶25
+	/*  å¤§äº”è§’æ˜Ÿ  */
+	//10ä¸ªç‚¹åæ ‡
+	float x = 220.0, y = 190.0;//ä¸­å¿ƒç‚¹
+	float R = 30.0;            //åŠå¾„30
 	float Ax = x, Ay = y - R;
 	float Bx = x + R * cos(0.1*PI), By = y - R * sin(0.1*PI);
 	float Cx = x + R * cos(0.3*PI), Cy = y + R * sin(0.3*PI);
@@ -43,12 +42,12 @@ int main()
 	{AAx,AAy},{Dx,Dy},{BBx,BBy},{Ex,Ey},{CCx,CCy} };
 	fillpolygon(pts, 10);
 
-	/*  Ğ¡Îå½ÇĞÇ  */
-	float r = 10.0;  //°ë¾¶Îª10
-	/*  Ğ¡Îå½ÇĞÇ1  */
-	//10¸öµã×ø±ê
+	/*  å°äº”è§’æ˜Ÿ  */
+	float r = 10.0;  //åŠå¾„ä¸º10
+	/*  å°äº”è§’æ˜Ÿ1  */
+	//10ä¸ªç‚¹åæ ‡
 	double arct1 = atan(0.6);
-	float x1 = 270.0, y1 = 160.0;//ÖĞĞÄµã
+	float x1 = 270.0, y1 = 160.0;//ä¸­å¿ƒç‚¹
 	float A1x = x1 + r * cos((36 + arct1) / 180 * PI),  A1y = y1 - r * sin((36 + arct1) / 180 * PI);
 	float B1x = x1 + r * cos((36 - arct1) / 180 * PI),  B1y = y1 + r * sin((36 - arct1) / 180 * PI);
 	float C1x = x1 + r * cos((108 - arct1) / 180 * PI), C1y = y1 + r * sin((108 - arct1) / 180 * PI);
@@ -67,10 +66,10 @@ int main()
 	{AA1x,AA1y},{D1x,D1y},{BB1x,BB1y},{E1x,E1y},{CC1x,CC1y} };
 	fillpolygon(pts1, 10);
 
-	/*  Ğ¡Îå½ÇĞÇ2  */
-	//10¸öµã×ø±ê
+	/*  å°äº”è§’æ˜Ÿ2  */
+	//10ä¸ªç‚¹åæ ‡
 	double arct2 = atan(1.0 / 7);
-	float x2 = 290.0, y2 = 180.0;//ÖĞĞÄµã
+	float x2 = 290.0, y2 = 180.0;//ä¸­å¿ƒç‚¹
 	float A2x = x2 - r * cos(arct2 / 180 * PI),        A2y = y2 + r * sin(arct2 / 180 * PI);
 	float B2x = x2 - r * cos((72 - arct2) / 180 * PI), B2y = y2 - r * sin((72 - arct2) / 180 * PI);
 	float C2x = x2 + r * cos((36 + arct2) / 180 * PI), C2y = y2 - r * sin((36 + arct2) / 180 * PI);
@@ -89,9 +88,9 @@ int main()
 	{AA2x,AA2y},{D2x,D2y},{BB2x,BB2y},{E2x,E2y},{CC2x,CC2y} };
 	fillpolygon(pts2, 10);
 
-	/*  Ğ¡Îå½ÇĞÇ3  */
-	//10¸öµã×ø±ê
-	float x3 = 290.0, y3 = 210.0;//ÖĞĞÄµã
+	/*  å°äº”è§’æ˜Ÿ3  */
+	//10ä¸ªç‚¹åæ ‡
+	float x3 = 290.0, y3 = 210.0;//ä¸­å¿ƒç‚¹
 	float A3x = x3,                   A3y = y3 - r;
 	float B3x = x3 + r * cos(0.1*PI), B3y = y3 - r * sin(0.1*PI);
 	float C3x = x3 + r * cos(0.3*PI), C3y = y3 + r * sin(0.3*PI);
@@ -110,10 +109,10 @@ int main()
 	{AA3x,AA3y},{D3x,D3y},{BB3x,BB3y},{E3x,E3y},{CC3x,CC3y} };
 	fillpolygon(pts3, 10);
 
-	/*  Ğ¡Îå½ÇĞÇ4  */
-	//10¸öµã×ø±ê
+	/*  å°äº”è§’æ˜Ÿ4  */
+	//10ä¸ªç‚¹åæ ‡
 	double arct4 = atan(0.8);
-	float x4 = 270.0, y4 = 230.0;//ÖĞĞÄµã
+	float x4 = 270.0, y4 = 230.0;//ä¸­å¿ƒç‚¹
 	float A4x = x4 - r * cos(arct4 / 180 * PI),         A4y = y4 - r * sin(arct4 / 180 * PI);
 	float B4x = x4 + r * cos((108 - arct4) / 180 * PI), B4y = y4 - r * sin((108 - arct4) / 180 * PI);
 	float C4x = x4 + r * cos((arct4 - 36) / 180 * PI),  C4y = y4 + r * sin((arct4 - 36) / 180 * PI);
@@ -134,5 +133,5 @@ int main()
 	
 	_getch();
 	closegraph();
-    return 0;
+        return 0;
 }
